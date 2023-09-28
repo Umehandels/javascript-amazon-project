@@ -50,8 +50,9 @@
   border-bottom-left-radius: 4px;
 }
 .search-bar::placeholder{
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
+  font-family: Arial;
 }
 .search-button{
   display: flex;
@@ -103,12 +104,13 @@
   align-items: center;
   justify-content: center;
   padding: 6px 5px;
+  cursor: pointer; 
 }
 .div-cart-icon:hover{
   border: 1px solid white;
 }
 .cart-icon{
-  width: 45px;   
+  width: 45px;  
 }
 .cart-quantity{
   position: absolute;
