@@ -129,7 +129,6 @@ select{
 .added-message{
   display: flex;
   align-items: center;
-  opacity: 0;
 }
 .add-to-cart-result-img{
   width: 20px;
