@@ -48,7 +48,7 @@ input:focus {
     grid-template-columns: 1fr;
     margin-top: 50px; 
   }
-  .amazon-product-container{
+  /*.amazon-product-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -56,7 +56,7 @@ input:focus {
     border-top: 1px solid rgb(202, 202, 202);
     padding: 17px 16px;
     
-  }
+  }*/
   
 }
 .amazon-product-container{
@@ -129,6 +129,7 @@ select{
 .added-message{
   display: flex;
   align-items: center;
+  margin: 0px;
 }
 .add-to-cart-result-img{
   width: 20px;

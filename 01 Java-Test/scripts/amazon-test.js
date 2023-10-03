@@ -14,10 +14,10 @@ products.forEach((product) => {
       <div class="rating-text">${product.count}</div>
     </div>
     <div class="product-price">
-      ${(product.priceCents*10)/1000}
+      ${((product.priceCents*10)/1000).toFixed(2)}
     </div>
     <div class="product-select-container">
-      <select>
+      <select class="js-quantity-select${product.name}">
         <option selected value="1">1</option>
         <option value = "2">2</option>
         <option value = "3">3</option>
@@ -26,9 +26,7 @@ products.forEach((product) => {
       </select>
     </div>
 
-    <p class="added-message js-added-message">
-       
-    <p>
+    <p class="added-message js-added-message"><p>
     
     <button class="add-to-cart-button js-add-to-cart-button" data-product-name="${product.name}">
       Add to Cart
@@ -68,10 +66,12 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button)=>{
 
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
-    let addedTo = document.querySelector('.js-added-message');
+    /*let addedTo = document.querySelector('.js-added-message');
 
+    addedTo.innerHTML = ' <img class="add-to-cart-result-img" src="Images/images/icons/checkmark.png"><div class="add-to-cart-text"> Added</div>';
+    
     setTimeout(() => {
-      addedTo.innerHTML = ' <img class="add-to-cart-result-img" src="Images/images/icons/checkmark.png"><div class="add-to-cart-text"> Added</div>'
-    }, 2000);
+      addedTo.innerHTML =''
+    }, 5000);*/
   })
 });
