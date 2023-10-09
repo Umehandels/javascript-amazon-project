@@ -3,6 +3,7 @@ import {products} from '../data/products.js';
 let productsHTML ='';
 import {formatCurrency} from './utils/money.js';
 
+updateCartquantity();
 products.forEach((product)=>{
   productsHTML += `
     <div class="product-container">
@@ -62,7 +63,7 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 //const addedMessageTimeouts ={};
 
 
-function updateCartquantity(){
+export function updateCartquantity(){
   let cartQuantity = 0;
 
   cart.forEach((cartItem) => {
@@ -90,6 +91,7 @@ function updateCartquantity(){
      // Save the timeoutId for this product
     // so we can stop it later if we need to.
     addedMessageTimeouts[products] = timeoutId;*/
+    
 } 
 
 document.querySelectorAll('.js-add-to-cart')
