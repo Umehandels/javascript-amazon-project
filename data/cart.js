@@ -41,6 +41,7 @@ export function addToCart (productId){
     saveToStorage();
 }
 
+//Delete Button function.
 export function removeFromcart(productId){
    const newCart =[];
 
@@ -52,4 +53,19 @@ export function removeFromcart(productId){
 
    cart = newCart;
    saveToStorage();
+}
+
+//updating from saving to the cart quantity
+ export function updateQuantity(productId, newQuantity){
+  let matchingItem;
+
+    cart.forEach((cartItem)=>{
+      if(productId === cartItem.productId){
+        matchingItem = cartItem;
+      }
+    });
+
+    matchingItem.quantity = newQuantity;
+
+    saveToStorage();
 }
